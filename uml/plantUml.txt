@@ -1,0 +1,28 @@
+@startuml
+class Funcionario {
+    -nome: String;
+    -CPF: String;
+    -dataNascimento: String
+    -numDependentes: Integer
+    -salario: Double
+    +double: getBonusAnual()
+}
+
+class PessoaProgramadora extends Funcionario {
+    -crp: Integer
+}
+
+class CientistaDados extends Funcionario {
+    -crcd: Integer
+    +double: getBonusAnual() <<override>>
+}
+
+class GerenteTI extends Funcionario {
+    -nummFuncionarios: Integer
+    -ramal: String
+    -senha: String
+    +boolean: autentica(String senha)
+    +boolean: autentica(String cpf, String senha)
+    +double: getBonusAnual() <<override>>
+}
+@enduml
