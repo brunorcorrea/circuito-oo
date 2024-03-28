@@ -3,7 +3,7 @@ public class GerenteTI extends Funcionario {
     private String ramal;
     private String senha;
 
-    public GerenteTI(String nome, String CPF, String dataNascimento, Double salario, Integer numFuncionarios, String ramal, String senha) {
+    public GerenteTI(String nome, String CPF, String dataNascimento, double salario, Integer numFuncionarios, String ramal, String senha) {
         super(nome, CPF, dataNascimento, salario);
         this.numFuncionarios = numFuncionarios;
         this.ramal = ramal;
@@ -21,7 +21,7 @@ public class GerenteTI extends Funcionario {
     }
 
     @Override
-    public Double getBonusAnual() {
+    public double getBonusAnual() {
         return (super.getSalario()*0.1) * this.getNumFuncionarios();
     }
 

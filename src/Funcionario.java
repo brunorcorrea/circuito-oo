@@ -2,7 +2,7 @@ public class Funcionario {
     private String nome;
     private String CPF;
     private String dataNascimento;
-    private Double salario;
+    private double salario;
 
     public Funcionario() {
     }
@@ -13,14 +13,14 @@ public class Funcionario {
         this.dataNascimento = dataNascimento;
     }
 
-    public Funcionario(String nome, String CPF, String dataNascimento, Double salario) {
+    public Funcionario(String nome, String CPF, String dataNascimento, double salario) {
         this.nome = nome;
         this.CPF = CPF;
         this.dataNascimento = dataNascimento;
         this.salario = salario;
     }
 
-    public Double getBonusAnual() {
+    public double getBonusAnual() {
         return 0.1 * salario;
     }
 
@@ -48,11 +48,11 @@ public class Funcionario {
         this.dataNascimento = dataNascimento;
     }
 
-    public java.lang.Double getSalario() {
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(java.lang.Double salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 }

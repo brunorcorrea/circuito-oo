@@ -1,13 +1,16 @@
 public class CientistaDados extends Funcionario {
     private Integer crcd;
 
-    public CientistaDados(String nome, String CPF, String dataNascimento, Double salario, Integer crcd) {
+    public CientistaDados() {
+    }
+
+    public CientistaDados(String nome, String CPF, String dataNascimento, double salario, Integer crcd) {
         super(nome, CPF, dataNascimento, salario);
         this.crcd = crcd;
     }
 
     @Override
-    public Double getBonusAnual() {
+    public double getBonusAnual() {
         return super.getBonusAnual() + 500.00;
     }
 

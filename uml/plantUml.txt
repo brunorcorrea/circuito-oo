@@ -4,7 +4,7 @@ class Funcionario {
     -CPF: String;
     -dataNascimento: String
     -numDependentes: Integer
-    -salario: Double
+    -salario: double
     +double: getBonusAnual()
 }
 
@@ -25,4 +25,12 @@ class GerenteTI extends Funcionario {
     +boolean: autentica(String cpf, String senha)
     +double: getBonusAnual() <<override>>
 }
+
+class RelatorioGastos {
+    -totalSalario: double
+    -totalBonus: double
+    +void:adicionaValores(Funcionario funcionario)
+}
+
+RelatorioGastos ..> Funcionario
 @enduml
