@@ -11,7 +11,12 @@ public class CientistaDados extends Funcionario {
 
     @Override
     public double getBonusAnual() {
-        return super.getBonusAnual() + 500.00;
+        return this.getSalario() * 0.1 + 500.00;
+    }
+
+    @Override
+    public void saudacao() {
+        System.out.println("Oi cientista de dados, espero que esteja bem!");
     }
 
     public Integer getCrcd() {

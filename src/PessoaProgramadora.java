@@ -13,4 +13,14 @@ public class PessoaProgramadora extends Funcionario {
     public void setCrp(Integer crp) {
         this.crp = crp;
     }
+
+    @Override
+    public double getBonusAnual() {
+        return this.getSalario() * 0.18;
+    }
+
+    @Override
+    public void saudacao() {
+        System.out.println("Ola pessoa programadora!");
+    }
 }

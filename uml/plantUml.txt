@@ -1,20 +1,30 @@
 @startuml
-class Funcionario {
+abstract class Funcionario {
     -nome: String;
     -CPF: String;
     -dataNascimento: String
     -numDependentes: Integer
     -salario: double
-    +double: getBonusAnual()
+    {abstract} +double: getBonusAnual()
+    {abstract} +void: saudacao()
 }
 
 class PessoaProgramadora extends Funcionario {
     -crp: Integer
+    +double: getBonusAnual() <<override>>
+    +void: saudacao() <<override>>
+}
+
+class DevFrontEnd extends PessoaProgramadora {
+    -crpw  : Integer
+    +double: getBonusAnual() <<override>>
+    +void: saudacao() <<override>>
 }
 
 class CientistaDados extends Funcionario {
     -crcd: Integer
     +double: getBonusAnual() <<override>>
+    +void: saudacao() <<override>>
 }
 
 class GerenteTI extends Funcionario {
@@ -24,13 +34,14 @@ class GerenteTI extends Funcionario {
     +boolean: autentica(String senha)
     +boolean: autentica(String cpf, String senha)
     +double: getBonusAnual() <<override>>
+    +void: saudacao() <<override>>
 }
 
-class RelatorioGastos {
+/'class RelatorioGastos {
     -totalSalario: double
     -totalBonus: double
     +void:adicionaValores(Funcionario funcionario)
 }
 
-RelatorioGastos ..> Funcionario
+RelatorioGastos ..> Funcionario'/
 @enduml

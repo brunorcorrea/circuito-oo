@@ -8,8 +8,8 @@ public class TestaRelatorioGastos {
     public static void main(String[] args) {
         var relatorioGastos = new RelatorioGastos();
 
-        Funcionario funcionario = new Funcionario("Mitsuo", "12331234232", "12/02/2004", 322.2);
-        relatorioGastos.atualizaValores(funcionario);
+//        Funcionario funcionario = new Funcionario("Mitsuo", "12331234232", "12/02/2004", 322.2);
+//        relatorioGastos.atualizaValores(funcionario);
 
         Funcionario cientistaDados = new CientistaDados("Vinão", "54324332143", "03/03/2004", 1000.0, 45);
         relatorioGastos.atualizaValores(cientistaDados);
@@ -24,7 +24,7 @@ public class TestaRelatorioGastos {
         System.out.printf("O valor total gasto em bonus é: %.2f\n", relatorioGastos.getTotalBonus());
 
         List<Funcionario> listaFuncionarios = new ArrayList<>();
-        listaFuncionarios.add(funcionario);
+//        listaFuncionarios.add(funcionario);
         listaFuncionarios.add(cientistaDados);
         listaFuncionarios.add(gerenteTI);
         listaFuncionarios.add(pessoaProgramadora);

@@ -25,6 +25,11 @@ public class GerenteTI extends Funcionario {
         return (super.getSalario()*0.1) * this.getNumFuncionarios();
     }
 
+    @Override
+    public void saudacao() {
+        System.out.println("Hello IT Manager, how are you?!");
+    }
+
     public Integer getNumFuncionarios() {
         return numFuncionarios;
     }
