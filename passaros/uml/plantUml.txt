@@ -1,0 +1,40 @@
+@startuml
+abstract class Ave {
+    -nome: String
+    -peso: double
+    +double: pia()
+    +void: anda()
+}
+
+abstract class AveMarinha extends Ave {
+    +void: nada()
+}
+
+class Pinguim extends AveMarinha {
+    -conjuge: Pinguim
+}
+
+abstract class AveTerrestre extends Ave {
+    +void: corre()
+}
+
+class Avestruz extends AveTerrestre {
+    +void: camufla()
+}
+
+abstract class Passaro extends Ave {
+    +void: voa()
+    {abstract} +void: canta()
+}
+
+class BeijaFlor extends Passaro {
+    +void: voaPraTras()
+    +void: canta() <<override>>
+}
+
+class Papagaio extends Passaro {
+    +void: fala()
+    +void: canta() <<override>>
+}
+
+@enduml
