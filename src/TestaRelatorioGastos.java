@@ -17,8 +17,8 @@ public class TestaRelatorioGastos {
         Funcionario gerenteTI = new GerenteTI("Bruno", "43564674564", "09/01/2004", 7666.45, 5, "12", "abc212");
         relatorioGastos.atualizaValores(gerenteTI);
 
-        Funcionario pessoaProgramadora = new PessoaProgramadora("Nicolas", "65478968954", "12/12/2004", 877.8, 99);
-        relatorioGastos.atualizaValores(pessoaProgramadora);
+//        Funcionario pessoaProgramadora = new PessoaProgramadora("Nicolas", "65478968954", "12/12/2004", 877.8, 99);
+//        relatorioGastos.atualizaValores(pessoaProgramadora);
 
         System.out.printf("O valor total gasto em salários é: %.2f\n", relatorioGastos.getTotalSalario());
         System.out.printf("O valor total gasto em bonus é: %.2f\n", relatorioGastos.getTotalBonus());
@@ -27,15 +27,15 @@ public class TestaRelatorioGastos {
 //        listaFuncionarios.add(funcionario);
         listaFuncionarios.add(cientistaDados);
         listaFuncionarios.add(gerenteTI);
-        listaFuncionarios.add(pessoaProgramadora);
+//        listaFuncionarios.add(pessoaProgramadora);
 
         listaFuncionarios.forEach(func -> {
             if (func instanceof GerenteTI) {
                 System.out.println("Seu tipo é Gerente TI");
             } else if (func instanceof CientistaDados) {
                 System.out.println("Seu tipo é Cientista de Dados");
-            } else if (func instanceof PessoaProgramadora) {
-                System.out.println("Seu tipo é Pessoa Programada");
+//            } else if (func instanceof PessoaProgramadora) {
+//                System.out.println("Seu tipo é Pessoa Programada");
             } else {
                 System.out.println("Seu tipo é Funcionário");
             }

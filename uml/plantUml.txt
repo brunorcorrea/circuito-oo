@@ -9,13 +9,33 @@ abstract class Funcionario {
     {abstract} +void: saudacao()
 }
 
-class PessoaProgramadora extends Funcionario {
+interface Autenticavel {
+    {abstract} +boolean: autentica(String senha)
+}
+
+class AssistenteRH extends Funcionario implements Autenticavel {
+    -senha: String
+    -id: Integer
+    +double: getBonusAnual() <<override>>
+    +void: saudacao() <<override>>
+    +boolean: autentica(String senha) <<override>>
+}
+
+class AuditorRH implements Autenticavel {
+    -id: Integer
+    -senha: String
+    +double: getBonusAnual() <<override>>
+    +void: saudacao() <<override>>
+    +boolean: autentica(String senha) <<override>>
+}
+
+/'class PessoaProgramadora extends Funcionario {
     -crp: Integer
     +double: getBonusAnual() <<override>>
     +void: saudacao() <<override>>
-}
+}'/
 
-class DevFrontEnd extends PessoaProgramadora {
+class DevFrontEnd extends Funcionario {
     -crpw  : Integer
     +double: getBonusAnual() <<override>>
     +void: saudacao() <<override>>
@@ -27,15 +47,19 @@ class CientistaDados extends Funcionario {
     +void: saudacao() <<override>>
 }
 
-class GerenteTI extends Funcionario {
+class GerenteTI extends Funcionario implements Autenticavel {
+
     -nummFuncionarios: Integer
     -ramal: String
-    -senha: String
-    +boolean: autentica(String senha)
-    +boolean: autentica(String cpf, String senha)
+    +boolean: autentica(String senha) <<override>>
     +double: getBonusAnual() <<override>>
     +void: saudacao() <<override>>
 }
+
+class RelatorioAutoAvaliacao {
+}
+
+RelatorioAutoAvaliacao -- Autenticavel
 
 /'class RelatorioGastos {
     -totalSalario: double

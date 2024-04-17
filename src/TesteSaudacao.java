@@ -12,11 +12,11 @@ public class TesteSaudacao {
         Funcionario gerenteTI = new GerenteTI("Bruno", "43564674564", "09/01/2004", 7666.45, 5, "12", "abc212");
         funcionarios.add(gerenteTI);
 
-        Funcionario pessoaProgramadora = new PessoaProgramadora("Nicolas", "65478968954", "12/12/2004", 877.8, 99);
-        funcionarios.add(pessoaProgramadora);
+//        Funcionario pessoaProgramadora = new PessoaProgramadora("Nicolas", "65478968954", "12/12/2004", 877.8, 99);
+//        funcionarios.add(pessoaProgramadora);
 
-        Funcionario devFrontEnd = new DevFrontEnd("Nicolas", "65478968954", "12/12/2004", 877.8, 99, 675);
-        funcionarios.add(devFrontEnd);
+//        Funcionario devFrontEnd = new DevFrontEnd("Nicolas", "65478968954", "12/12/2004", 877.8, 99, 675);
+//        funcionarios.add(devFrontEnd);
 
         for (Funcionario funcionario : funcionarios) {
             funcionario.saudacao();

@@ -1,8 +1,8 @@
-public class DevFrontEnd extends PessoaProgramadora {
+public class DevFrontEnd extends Funcionario {
     private Integer crpw;
 
-    public DevFrontEnd(String nome, String CPF, String dataNascimento, double salario, Integer crp, Integer crpw) {
-        super(nome, CPF, dataNascimento, salario, crp);
+    public DevFrontEnd(String nome, String CPF, String dataNascimento, double salario, Integer crpw) {
+        super(nome, CPF, dataNascimento, salario);
         this.crpw = crpw;
     }
 
