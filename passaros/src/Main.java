@@ -1,26 +1,51 @@
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Pinguim pinguim = new Pinguim();
-        pinguim.anda();
-        pinguim.nada();
-
         Avestruz avestruz = new Avestruz();
-        avestruz.anda();
-        avestruz.corre();
-        avestruz.camufla();
-
         BeijaFlor beijaFlor = new BeijaFlor();
-        beijaFlor.anda();
-        beijaFlor.voa();
-        beijaFlor.canta();
-        beijaFlor.voaPraTras();
-
+        Grilo grilo = new Grilo();
         Papagaio papagaio = new Papagaio();
-        papagaio.anda();
-        papagaio.voa();
-        papagaio.canta();
-        papagaio.fala();
+        Pinguim pinguim = new Pinguim();
+        List<Animal> animais = List.of(avestruz, beijaFlor, grilo, papagaio, pinguim);
+
+        for (Animal animal : animais) {
+            System.out.println("\n== " + animal.getClass().getSimpleName() + " ==");
+
+            if(animal instanceof Ave ave) {
+                ave.anda();
+                ave.pia();
+            }
+
+            if(animal instanceof AveMarinha aveMarinha) {
+                aveMarinha.nada();
+            }
+
+            if(animal instanceof AveTerrestre aveTerrestre) {
+                aveTerrestre.corre();
+            }
+
+            if(animal instanceof Passaro passaro) {
+                passaro.voa();
+            }
+
+            if(animal instanceof Avestruz avestruz1) {
+                avestruz1.camufla();
+            }
+
+            if(animal instanceof BeijaFlor beijaFlor1) {
+                beijaFlor1.voaPraTras();
+            }
+
+            if(animal instanceof Papagaio papagaio1) {
+                papagaio1.fala();
+            }
+
+            if (animal instanceof Cantavel cantavel) {
+                cantavel.canta();
+            }
+        }
     }
 }

@@ -1,15 +1,6 @@
-public abstract class Passaro extends Ave {
-
-    public Passaro() {
-    }
-
-    public Passaro(String nome, double peso) {
-        super(nome, peso);
-    }
+public abstract class Passaro extends Ave implements Cantavel {
 
     public void voa() {
-        System.out.println("Eu consigo voaaaarr");
+        System.out.println("Passaro voando!");
     }
-
-    public abstract void canta();
 }

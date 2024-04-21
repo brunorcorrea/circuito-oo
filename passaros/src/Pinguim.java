@@ -1,12 +1,10 @@
-public class Pinguim extends AveMarinha {
+public class Pinguim extends AveMarinha implements Cantavel {
 
     private Pinguim conjuge;
 
-    public Pinguim() {
-    }
-
-    public Pinguim(String nome, double peso) {
-        super(nome, peso);
+    @Override
+    public void canta() {
+        System.out.println("Pinguim cantando!");
     }
 
     public Pinguim getConjuge() {

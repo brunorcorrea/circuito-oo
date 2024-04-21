@@ -1,36 +1,10 @@
-public class Ave {
-    private String nome;
-    private double peso;
-
-    public Ave() {
-    }
-
-    public Ave(String nome, double peso) {
-        this.nome = nome;
-        this.peso = peso;
-    }
+public abstract class Ave extends Animal {
 
     public void pia() {
-        System.out.println("MIAUUUUUUUUUU");
+        System.out.println("Ave piando!");
     }
 
     public void anda() {
-        System.out.println("Toc toc toc toc");
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
+        System.out.println("Ave andando!");
     }
 }

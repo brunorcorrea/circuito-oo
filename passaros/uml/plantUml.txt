@@ -1,17 +1,34 @@
 @startuml
-abstract class Ave {
+
+abstract class Animal {
     -nome: String
     -peso: double
+}
+
+abstract class Inseto extends Animal {
+    -qtdPernas: int
+}
+
+class Grilo extends Inseto implements Cantavel {
+    +void: canta() <<override>>
+}
+
+abstract class Ave extends Animal {
     +double: pia()
     +void: anda()
+}
+
+interface Cantavel {
+    {abstract} +void: canta()
 }
 
 abstract class AveMarinha extends Ave {
     +void: nada()
 }
 
-class Pinguim extends AveMarinha {
+class Pinguim extends AveMarinha implements Cantavel {
     -conjuge: Pinguim
+    +void: canta() <<override>>
 }
 
 abstract class AveTerrestre extends Ave {
@@ -22,9 +39,8 @@ class Avestruz extends AveTerrestre {
     +void: camufla()
 }
 
-abstract class Passaro extends Ave {
+abstract class Passaro extends Ave implements Cantavel {
     +void: voa()
-    {abstract} +void: canta()
 }
 
 class BeijaFlor extends Passaro {
@@ -36,5 +52,4 @@ class Papagaio extends Passaro {
     +void: fala()
     +void: canta() <<override>>
 }
-
 @enduml
