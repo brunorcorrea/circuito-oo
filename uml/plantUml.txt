@@ -1,7 +1,7 @@
 @startuml
 abstract class main.Funcionario {
     -nome: String;
-    -CPF: String;
+    -cadastroPessoaFisica: String;
     -dataNascimento: String
     -numDependentes: Integer
     -salario: double
@@ -35,7 +35,7 @@ class main.AuditorRH implements main.Autenticavel {
     +void: saudacao() <<override>>
 }'/
 
-class main.DevFrontEnd extends main.Funcionario {
+class main.DesenvolvedorFrontEnd extends main.Funcionario {
     -crpw  : Integer
     +double: getBonusAnual() <<override>>
     +void: saudacao() <<override>>

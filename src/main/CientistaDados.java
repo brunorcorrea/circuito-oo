@@ -1,19 +1,22 @@
 package main;
 
 public class CientistaDados extends Funcionario {
-    private Integer crcd;
+    private static final double BONUS_ANUAL_FIXO = 500.00;
+    private static final double PORCENTAGEM_SALARIO_BONUS_ANUAL = 0.1;
+
+    private Integer registroConselhoRegionalCienciaDados;
 
     public CientistaDados() {
     }
 
-    public CientistaDados(String nome, String CPF, String dataNascimento, double salario, Integer crcd) {
-        super(nome, CPF, dataNascimento, salario);
-        this.crcd = crcd;
+    public CientistaDados(String nome, String cadastroPessoaFisica, String dataNascimento, double salario, Integer registroConselhoRegionalCienciaDados) {
+        super(nome, cadastroPessoaFisica, dataNascimento, salario);
+        this.registroConselhoRegionalCienciaDados = registroConselhoRegionalCienciaDados;
     }
 
     @Override
     public double getBonusAnual() {
-        return this.getSalario() * 0.1 + 500.00;
+        return this.getSalario() * PORCENTAGEM_SALARIO_BONUS_ANUAL + BONUS_ANUAL_FIXO;
     }
 
     @Override
@@ -21,11 +24,11 @@ public class CientistaDados extends Funcionario {
         System.out.println("Oi cientista de dados, espero que esteja bem!");
     }
 
-    public Integer getCrcd() {
-        return crcd;
+    public Integer getRegistroConselhoRegionalCienciaDados() {
+        return registroConselhoRegionalCienciaDados;
     }
 
-    public void setCrcd(Integer crcd) {
-        this.crcd = crcd;
+    public void setRegistroConselhoRegionalCienciaDados(Integer registroConselhoRegionalCienciaDados) {
+        this.registroConselhoRegionalCienciaDados = registroConselhoRegionalCienciaDados;
     }
 }

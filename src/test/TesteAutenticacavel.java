@@ -1,4 +1,6 @@
-package main;
+package test;
+
+import main.AuditorRH;
 
 public class TesteAutenticacavel {
     public static void main(String[] args) {

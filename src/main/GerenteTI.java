@@ -5,20 +5,20 @@ public class GerenteTI extends Funcionario implements Autenticavel {
     private String ramal;
     private String senha;
 
-    public GerenteTI(String nome, String CPF, String dataNascimento, double salario, Integer numFuncionarios, String ramal, String senha) {
-        super(nome, CPF, dataNascimento, salario);
+    public GerenteTI(String nome, String cadastroPessoaFisica, String dataNascimento, double salario, Integer numFuncionarios, String ramal, String senha) {
+        super(nome, cadastroPessoaFisica, dataNascimento, salario);
         this.numFuncionarios = numFuncionarios;
         this.ramal = ramal;
         this.senha = senha;
     }
 
-    public boolean autentica (String senha) {
+    public boolean autentica(String senha) {
         return this.senha.equals(senha);
     }
 
     @Override
     public double getBonusAnual() {
-        return (super.getSalario()*0.1) * this.getNumFuncionarios();
+        return (super.getSalario() * 0.1) * this.getNumFuncionarios();
     }
 
     @Override

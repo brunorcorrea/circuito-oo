@@ -2,22 +2,22 @@ package main;
 
 public abstract class Funcionario {
     private String nome;
-    private String CPF;
+    private String cadastroPessoaFisica;
     private String dataNascimento;
     private double salario;
 
     public Funcionario() {
     }
 
-    public Funcionario(String nome, String CPF, String dataNascimento) {
+    public Funcionario(String nome, String cadastroPessoaFisica, String dataNascimento) {
         this.nome = nome;
-        this.CPF = CPF;
+        this.cadastroPessoaFisica = cadastroPessoaFisica;
         this.dataNascimento = dataNascimento;
     }
 
-    public Funcionario(String nome, String CPF, String dataNascimento, double salario) {
+    public Funcionario(String nome, String cadastroPessoaFisica, String dataNascimento, double salario) {
         this.nome = nome;
-        this.CPF = CPF;
+        this.cadastroPessoaFisica = cadastroPessoaFisica;
         this.dataNascimento = dataNascimento;
         this.salario = salario;
     }
@@ -34,12 +34,12 @@ public abstract class Funcionario {
         this.nome = nome;
     }
 
-    public String getCPF() {
-        return CPF;
+    public String getCadastroPessoaFisica() {
+        return cadastroPessoaFisica;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCadastroPessoaFisica(String cadastroPessoaFisica) {
+        this.cadastroPessoaFisica = cadastroPessoaFisica;
     }
 
     public String getDataNascimento() {
@@ -57,5 +57,4 @@ public abstract class Funcionario {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-
 }

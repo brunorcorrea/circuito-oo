@@ -16,6 +16,6 @@ public class AssistenteRH extends Funcionario implements Autenticavel {
 
     @Override
     public void saudacao() {
-
+        System.out.println("Hola yo soy el Asistente de Recursos Humanos, ¿cómo estás?!");
     }
 }

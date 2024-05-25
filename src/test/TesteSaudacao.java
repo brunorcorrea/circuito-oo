@@ -1,4 +1,8 @@
-package main;
+package test;
+
+import main.CientistaDados;
+import main.Funcionario;
+import main.GerenteTI;
 
 import java.util.ArrayList;
 import java.util.List;

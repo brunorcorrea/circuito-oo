@@ -1,12 +1,14 @@
-package main;
+package test;
+
+import main.CientistaDados;
 
 public class TesteAutenticacao {
     public static void main(String[] args) {
            CientistaDados C = new CientistaDados();
            C.setNome("Biro");
-           C.setCPF("12345678900");
+        C.setCadastroPessoaFisica("12345678900");
            C.setDataNascimento("05/06/2003");
-           C.setCrcd(23);
+        C.setRegistroConselhoRegionalCienciaDados(23);
            C.setSalario(12.23);
 
 //           if(C.autentica("4567")) {
