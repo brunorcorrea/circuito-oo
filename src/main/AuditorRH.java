@@ -1,3 +1,5 @@
+package main;
+
 public class AuditorRH implements Autenticavel {
 
     private Integer id;

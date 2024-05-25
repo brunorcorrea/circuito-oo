@@ -1,5 +1,5 @@
 @startuml
-abstract class Funcionario {
+abstract class main.Funcionario {
     -nome: String;
     -CPF: String;
     -dataNascimento: String
@@ -9,11 +9,11 @@ abstract class Funcionario {
     {abstract} +void: saudacao()
 }
 
-interface Autenticavel {
+interface main.Autenticavel {
     {abstract} +boolean: autentica(String senha)
 }
 
-class AssistenteRH extends Funcionario implements Autenticavel {
+class main.AssistenteRH extends main.Funcionario implements main.Autenticavel {
     -senha: String
     -id: Integer
     +double: getBonusAnual() <<override>>
@@ -21,7 +21,7 @@ class AssistenteRH extends Funcionario implements Autenticavel {
     +boolean: autentica(String senha) <<override>>
 }
 
-class AuditorRH implements Autenticavel {
+class main.AuditorRH implements main.Autenticavel {
     -id: Integer
     -senha: String
     +double: getBonusAnual() <<override>>
@@ -29,25 +29,25 @@ class AuditorRH implements Autenticavel {
     +boolean: autentica(String senha) <<override>>
 }
 
-/'class PessoaProgramadora extends Funcionario {
+/'class PessoaProgramadora extends main.Funcionario {
     -crp: Integer
     +double: getBonusAnual() <<override>>
     +void: saudacao() <<override>>
 }'/
 
-class DevFrontEnd extends Funcionario {
+class main.DevFrontEnd extends main.Funcionario {
     -crpw  : Integer
     +double: getBonusAnual() <<override>>
     +void: saudacao() <<override>>
 }
 
-class CientistaDados extends Funcionario {
+class main.CientistaDados extends main.Funcionario {
     -crcd: Integer
     +double: getBonusAnual() <<override>>
     +void: saudacao() <<override>>
 }
 
-class GerenteTI extends Funcionario implements Autenticavel {
+class main.GerenteTI extends main.Funcionario implements main.Autenticavel {
 
     -nummFuncionarios: Integer
     -ramal: String
@@ -59,13 +59,13 @@ class GerenteTI extends Funcionario implements Autenticavel {
 class RelatorioAutoAvaliacao {
 }
 
-RelatorioAutoAvaliacao -- Autenticavel
+RelatorioAutoAvaliacao -- main.Autenticavel
 
-/'class RelatorioGastos {
+/'class main.RelatorioGastos {
     -totalSalario: double
     -totalBonus: double
-    +void:adicionaValores(Funcionario funcionario)
+    +void:adicionaValores(main.Funcionario funcionario)
 }
 
-RelatorioGastos ..> Funcionario'/
+main.RelatorioGastos ..> main.Funcionario'/
 @enduml

@@ -1,3 +1,5 @@
+package main;
+
 public class RelatorioGastos {
     private double totalSalario = 0.0;
     private double totalBonus = 0.0;

@@ -1,3 +1,5 @@
+package main;
+
 public class GerenteTI extends Funcionario implements Autenticavel {
     private Integer numFuncionarios;
     private String ramal;

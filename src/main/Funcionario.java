@@ -1,3 +1,5 @@
+package main;
+
 public abstract class Funcionario {
     private String nome;
     private String CPF;

@@ -1,3 +1,5 @@
+package main;
+
 public class DevFrontEnd extends Funcionario {
     private Integer crpw;
 

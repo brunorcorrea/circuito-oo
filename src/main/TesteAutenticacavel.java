@@ -1,3 +1,5 @@
+package main;
+
 public class TesteAutenticacavel {
     public static void main(String[] args) {
            AuditorRH auditorRH = new AuditorRH();

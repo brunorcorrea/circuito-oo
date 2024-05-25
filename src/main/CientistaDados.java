@@ -1,3 +1,5 @@
+package main;
+
 public class CientistaDados extends Funcionario {
     private Integer crcd;
 

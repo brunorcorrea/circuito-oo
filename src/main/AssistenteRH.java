@@ -1,3 +1,5 @@
+package main;
+
 public class AssistenteRH extends Funcionario implements Autenticavel {
 
     private Integer id;
