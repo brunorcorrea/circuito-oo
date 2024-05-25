@@ -4,7 +4,7 @@ public class RelatorioGastos {
     private double totalSalarios = 0.0;
     private double totalBonusAnual = 0.0;
 
-    public void atualizaValores(Funcionario funcionario) {
+    public void atualizaGastos(Funcionario funcionario) {
         totalSalarios += funcionario.getSalario();
         totalBonusAnual += funcionario.getBonusAnual();
     }
